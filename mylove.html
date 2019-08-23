@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Mạnh Hùng - FITHOU</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="images/icon.jpg">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.min.css"><title>Mạnh Hùng - FITHOU</title>
+</head>
+<body>
+	<div class="bgimg">
+		<div class="topleft">
+			<a href="index.html">Quay lại</a>
+		</div>
+		<div class="middle">
+			<h1>Mạnh Hùng ❤ Bích Ngọc</h1>
+			<hr>
+			<p id="ngayyeu"></p>
+		</div>
+		<div class="bottomleft">
+			<span class="label label-warning">Tình yêu đang bảo trì, vui lòng trở lại sau :((</span>
+		</div>
+	</div>
+	<style>
+		body, html {
+			height: 100%
+		}
+
+		.bgimg {
+			/* Background image */
+			background-image: url('images/mylove.jpg');
+			/* Full-screen */
+			height: 100%;
+			/* Center the background image */
+			background-position: center;
+			/* Scale and zoom in the image */
+			background-size: cover;
+			/* Add position: relative to enable absolutely positioned elements inside the image (place text) */
+			position: relative;
+			/* Add a white text color to all elements inside the .bgimg container */
+			color: white;
+			/* Add a font */
+			font-family: "Courier New", Courier, monospace;
+			/* Set the font-size to 25 pixels */
+			font-size: 25px;
+		}
+
+		/* Position text in the top-left corner */
+		.topleft {
+			position: absolute;
+			top: 0;
+			left: 16px;
+		}
+
+		/* Position text in the bottom-left corner */
+		.bottomleft {
+			position: absolute;
+			bottom: 0;
+			left: 16px;
+		}
+
+		/* Position text in the middle */
+		.middle {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			text-align: center;
+		}
+
+		/* Style the <hr> element */
+		hr {
+			margin: auto;
+			width: 40%;
+		}
+	</style>
+	<script>
+		var countDownDate = new Date("May 20, 2019 02:00:00").getTime();
+		var ct = new Date("Aug 22, 2019 01:04:00").getTime();
+		var x = setInterval(function() {
+			var now = new Date().getTime();
+			var distance = ct -countDownDate;
+			var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+			var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+			var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+			var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+			document.getElementById("ngayyeu").innerHTML = days + " Ngày " + hours + " Giờ " + minutes + " Phút " + seconds + " Giây ";
+			if (distance < 0) {
+				clearInterval(x);
+				document.getElementById("ngayyeu").innerHTML = "EXPIRED";
+			}
+		}, 1000);
+	</script>
+</body>
+</html>
